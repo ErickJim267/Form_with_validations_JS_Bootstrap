@@ -1,1 +1,28 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+#formHeader {
+  text-align: center;
+  background: rgb(70, 134, 187);
+  width: auto;
+  /*height: 50px;*/
+}
+#formContainer {
+  width: 800px;
+  height: 670px;
+  margin: auto;
+  padding: 5px;
+  border: solid 2px black;
+}
+footer {
+  text-align: right;
+  background-color: whitesmoke;
+  width: 50%;
+  margin-top: 30px;
+  position: absolute;
+}
+#radBtnCC {
+  padding-top: 20px;
+}
+#msgArea {
+  text-align: end;
+}

@@ -1,29 +1,176 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-    <link rel="shortcut icon" href="./4geeks.ico" />
-  </head>
-  <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
+    <title>Payment Form Example - Validation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/01f03a119e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="formContainer">
+        <div id="formHeader">
+            <h1>Payment Form Example</h1>
+        </div>
+        <!-- $().alert(<div class="alert alert-danger" role="alert">
+                A simple danger alert—check it out!
+                </div>)-->
+        <br>
+        <form class="needs-validation" novalidate>
+            <div class="form-row">
+                <div class="col-md-5 mb-3">
+                    <label for="validationCustom">Card #</label>
+                    <input type="text" class="form-control" id="validationCustom06" placeholder="XXXX XXXX XXXX XXXX"
+                        value="" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid Card Number.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom">CVC #</label>
+                    <input type="text" class="form-control" id="validationCustom07" placeholder="0000" value=""
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a valid CVC Number.
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom">Amount</label>$
+                    <input type="text" class="form-control" id="validationCustom08" placeholder="Amount" value=""
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide an Amount to pay.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom01">First name</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value=""
+                        required>
+                    <div class="valid-feedback">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom02">Last name</label>
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value=""
+                        required>
+                    <div class="valid-feedback">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom03">City</label>
+                    <input type="text" class="form-control" id="validationCustom03" placeholder="City" value=""
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a valid city.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom03" id="inputState">State</label>
+                    <select id="inputState" class="form-control" id="validationCustom04" placeholder="State" value=""
+                        required>
+                        <option selected>State</option>
+                        <option>State 1</option>
+                        <option>State 2</option>
+                        <option>State 3</option>
+                        <option>State 4</option>
+                        <option>State 5</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please provide a valid state.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom05">Postal Code</label>
+                    <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" value="" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid zip.
+                    </div>
+                </div>
+            </div>
+            <!--Agregamos los íconos de TC con sus respectivos RadioButton-->
+            <div class="container row">
+                <div class="row">
+                    <label for="" style="margin-left: 15px; padding: 2px">We accept:</label>
+                    <br>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline1" name="customRadioInline1"
+                            class="custom-control-input" id="validationCustom02" >
+                        <label class="custom-control-label" for="customRadioInline1">
+                            <i class="fab fa-cc-mastercard"></i></label>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline2" name="customRadioInline1"
+                                class="custom-control-input" id="validationCustom02">
+                            <label class="custom-control-label" for="customRadioInline2">
+                                <i class="fab fa-cc-visa"></i></label>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline3" name="customRadioInline1"
+                                    class="custom-control-input" id="validationCustom02">
+                                <label class="custom-control-label" for="customRadioInline3">
+                                    <i class="fab fa-cc-diners-club"></i></label>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline4" name="customRadioInline1"
+                                        class="custom-control-input" id="validationCustom02">
+                                    <label class="custom-control-label" for="customRadioInline4">
+                                        <i class="fab fa-cc-amex"></i></label>
+                                </div>
+                            </div>
+                            <br>
+                            <div>
+                            <div>
+                                <div id="msgArea" class="form-group justify-content-end">
+                                    <label for="exampleFormControlTextarea1">Message</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" style="margin-left: 150px;"></textarea>
+                                    <i>Add any notes here</i>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--</div>-->
+            <footer>
+                <button class="btn btn-secondary" type="submit">Cancel</button>
+                <button class="btn btn-primary" type="submit">Send</button>
+            </footer>
+        </form>
     </div>
-  </body>
+    <script>
+        // Función para deshabilitar Envíos si hay campos inválidos
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                let forms = document.getElementsByClassName('needs-validation');
+                // Loopearlos y evitar el envío
+                let validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+    </div>
+    </div>
+    <div id="containerForm"></div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+</body>
+
 </html>
