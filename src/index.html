@@ -15,15 +15,13 @@
         <div id="formHeader">
             <h1>Payment Form Example</h1>
         </div>
-        <!-- $().alert(<div class="alert alert-danger" role="alert">
-                A simple danger alert—check it out!
-                </div>)-->
         <br>
-        <form class="needs-validation" novalidate>
+        <form id="miFormulario" class="needs-validation" novalidate>
+
             <div class="form-row">
                 <div class="col-md-5 mb-3">
                     <label for="validationCustom">Card #</label>
-                    <input type="text" class="form-control" id="validationCustom06" placeholder="XXXX XXXX XXXX XXXX"
+                    <input autofocus type="text" class="form-control" id="validationCustom06" placeholder="XXXX XXXX XXXX XXXX"
                         value="" required>
                     <div class="invalid-feedback">
                         Please provide a valid Card Number.
@@ -45,11 +43,12 @@
                         Please provide an Amount to pay.
                     </div>
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="row-col-md-6 mb-3">
                     <label for="validationCustom01">First name</label>
                     <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value=""
                         required>
                     <div class="valid-feedback">
+                        Plese type your name
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
@@ -57,38 +56,40 @@
                     <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value=""
                         required>
                     <div class="valid-feedback">
+                        Please type your last name
                     </div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="col-md-6 mb-3">
-                    <label for="validationCustom03">City</label>
-                    <input type="text" class="form-control" id="validationCustom03" placeholder="City" value=""
+                    <label for="validationCustom">City</label>
+                    <input type="text" class="form-control" id="validationCustom" placeholder="City" value=""
                         required>
                     <div class="invalid-feedback">
                         Please provide a valid city.
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label for="validationCustom03" id="inputState">State</label>
-                    <select id="inputState" class="form-control" id="validationCustom04" placeholder="State" value=""
+                    <label for="validationCustom" >State</label>
+                    <select id="inputState" class="form-control" id="validationCustom" placeholder="State" value=""
                         required>
-                        <option selected>State</option>
-                        <option>State 1</option>
-                        <option>State 2</option>
-                        <option>State 3</option>
-                        <option>State 4</option>
-                        <option>State 5</option>
-                    </select>
-                    <div class="invalid-feedback">
+                        <div class="invalid-feedback">
                         Please provide a valid state.
-                    </div>
+                        </div>
+                            <option selected required>State</option>
+                            <option >State 1</option>
+                            <option >State 2</option>
+                            <option >State 3</option>
+                            <option >State 4</option>
+                            <option >State 5</option>
+                    </select>
+                    
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label for="validationCustom05">Postal Code</label>
-                    <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" value="" required>
+                    <label for="validationCustom">Postal Code</label>
+                    <input type="text" class="form-control" id="validationCustom" placeholder="Zip" value="" required>
                     <div class="invalid-feedback">
-                        Please provide a valid zip.
+                        Please provide a valid ZIP Code.
                     </div>
                 </div>
             </div>
@@ -133,10 +134,10 @@
                     </div>
                 </div>
             </div>
-            <!--</div>-->
+            
             <footer>
-                <button class="btn btn-secondary" type="submit">Cancel</button>
-                <button class="btn btn-primary" type="submit">Send</button>
+                <button class="btn btn-secondary" name="Cancel" id="cancel" type="reset">Cancel</button>
+                <button class="btn btn-primary" type="submit" id="submit">Send</button>
             </footer>
         </form>
     </div>
@@ -162,7 +163,7 @@
     </div>
     </div>
     <div id="containerForm"></div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <!----><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
