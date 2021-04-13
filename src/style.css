@@ -1,5 +1,12 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
-
+body{
+    background-color: white;
+}
+.container{
+    margin: auto;
+    width: 800px;
+    height: 700px;
+}
 #formHeader {
   text-align: center;
   background: rgb(70, 134, 187);
@@ -13,16 +20,16 @@
   padding: 5px;
   border: solid 2px black;
 }
-footer {
+#footer {
   text-align: right;
   background-color: whitesmoke;
-  width: 50%;
+  width: 100%;
   margin-top: 30px;
   position: absolute;
 }
 #radBtnCC {
   padding-top: 20px;
 }
-#msgArea {
+#msgArea i{
   text-align: end;
 }
